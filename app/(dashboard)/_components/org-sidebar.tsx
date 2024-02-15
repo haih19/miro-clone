@@ -8,6 +8,7 @@ import { OrganizationSwitcher } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { LayoutDashboard, Star } from "lucide-react";
 import { useSearchParams } from "next/navigation";
+import { BRAND_NAME } from "@/helpers/constants";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -28,8 +29,9 @@ export const OrgSidebar = () => {
             height={60}
             width={60}
           />
-          <span className={cn("font-semibold text-2xl", font.className)}>
-            Miro
+          <span
+            className={cn("font-semibold text-2xl uppercase", font.className)}>
+            {BRAND_NAME}
           </span>
         </div>
       </Link>
